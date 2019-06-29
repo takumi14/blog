@@ -4,4 +4,7 @@ class BlogsController < ApplicationController
 
   end
 
+  def new 
+  end
+
 end
