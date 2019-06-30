@@ -1,1 +1,62 @@
-<p>Hello World</p>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample</title>
+  <style type="text/css" href="./style.css"></style>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+          
+</head>
+<body>
+
+    <nav class="#b3e5fc light-blue lighten-4">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">ブログアプリ</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">ログイン</a></li>
+            <li><a href="badges.html">サインアウト</a></li>
+            <li><a href="collapsible.html">投稿</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <ul class="list_article">
+      <% @article.each do |article| %>
+      <li>
+        <h2><%= article.title %></h2>
+        <p><%= article.text %></p>
+        <p><%= article.created_at %></p>
+        <div class="card">
+          <div class="card-content">
+          </div>
+          <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+              <li class="tab"><a href="#test4">見る</a></li>
+              <li class="tab"><a class="active" href="#test5">編集
+              </a></li>
+              <li class="tab"><a href="#test6">削除</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </li>
+      <% end %>
+    </ul>
+
+      
+
+<script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
