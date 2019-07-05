@@ -12,6 +12,11 @@ class BlogsController < ApplicationController
     Article.create(blog_params)
 end
 
+def destroy
+  article = Article.find(params[:id])
+  article.destroy if article.user_id == current_user.id
+end
+
 private
 def blog_params
     params.permit(:title, :text)
